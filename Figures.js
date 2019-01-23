@@ -246,19 +246,20 @@ function createSphere(gl, radius)
     var vertexBuffer;
     vertexBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
-
-    var verts = [
-        .0,  .0,  0.0,
-        .5,  .5,  0.0,
-        -.5, .5,  0.0,
-        -.5, -.5,  0.0,
-        .5, -.5,  0.0
-
-    ];
+    var verts = [0,0,0];
+    verts.push(0, 0, 0);
+    var _angle = 125;
+    var offset = Math.PI/5;
+    
+    for (i = 0; i < 100; i++){
+        verts.push( 
+            radius * Math.cos(((i * 2 * Math.PI)/_angle)+offset),
+            radius * Math.sin(((i * 2 * Math.PI)/_angle)+offset),
+            0
+        );
+    }
 
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(verts), gl.STATIC_DRAW);
-
-
-    var sphere = {buffer:vertexBuffer, vertSize:3, nVerts:5, primtype:gl.TRIANGLE_FAN};
+    var sphere = {buffer:vertexBuffer, vertSize:3, nVerts:100, primtype:gl.TRIANGLE_FAN};
     return sphere;
 }        
