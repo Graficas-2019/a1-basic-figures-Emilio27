@@ -15,3 +15,5 @@ Rubric:
 *Add a symbolic link or a shortcut to the libs library to get the assignment to work.*
 
 **Deadline: January 25, 14:30 hrs**
+
+**Grade: 100**/media/hagen/OS/Hagen/Clases/Graficas/2019-01-Graficas/Assignments/a1-basic-figures/a1-basic-figures-Emilio27/Figures.html
